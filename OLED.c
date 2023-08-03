@@ -1,7 +1,7 @@
 #include <xc.h>
 //#include <stdio.h>
 #ifdef _PIC16
-#include "../MiniTrip/I2C.h"
+#include "I2C.h"
 #endif
 #include "OLED.h"
 #define OLED_Adr 0x3C
