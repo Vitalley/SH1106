@@ -1,10 +1,12 @@
 #include <xc.h>
 //#include <stdio.h>
+#ifdef _PIC16
 #include "../MiniTrip/I2C.h"
-#include "../SH1106/OLED.h"
+#endif
+#include "OLED.h"
 #define OLED_Adr 0x3C
-#include "SH1106\Font16x8.h"
-#include "SH1106\Font40x20.h"
+#include "Font16x8.h"
+#include "Font40x20.h"
 void oledCommand(unsigned char comm, unsigned char Adr) {
 	StartI2C();
 	if (WriteI2C( (Adr<<1) & 0xFE)!=0) return;//Ќачинаем передачу команд устройству с адресом Adr.
